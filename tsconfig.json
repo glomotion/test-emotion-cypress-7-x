@@ -12,7 +12,7 @@
     "esModuleInterop": true,
     "allowJs": true, 
     "declaration": false,
-    "types": ["node", "jest", "webpack-env"],
+    "types": ["node", "webpack-env"],
     "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -31,10 +31,7 @@
     "removeComments": true
   },
   "include": [
-    "app",
-    "internals/templates",
-    "internals/mocks/cssModule.js",
-    "internals/mocks/image.js",
+    "src",
     "typings.d.ts"
   ],
   "exclude": ["node_modules", "build", "coverage", "cypress"]
