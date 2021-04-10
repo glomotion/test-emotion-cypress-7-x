@@ -9,6 +9,7 @@ import NotFoundPage from "./NotFoundPage";
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
     sheet.container = document.body;
+    console.log("@@@@@@@", sheet);
   });
 
   it("test 1", () => {
