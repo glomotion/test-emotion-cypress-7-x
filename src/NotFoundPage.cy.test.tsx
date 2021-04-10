@@ -10,7 +10,6 @@ import NotFoundPage from "./NotFoundPage";
 const cssCache = createCache({
   key: "mooo-cow",
   container: document.body,
-  prepend: true,
 });
 
 describe("<AssetDetailsContent />", () => {
