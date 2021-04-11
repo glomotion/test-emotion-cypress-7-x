@@ -8,8 +8,10 @@ import NotFoundPage from "./NotFoundPage";
 
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
-    sheet.container = document.body;
     console.log("@@@@@@@", sheet);
+    sheet.tags.forEach((tag) => {
+      document.body.appendChild(tag);
+    });
   });
 
   it("test 1", () => {
