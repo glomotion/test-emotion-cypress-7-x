@@ -1,9 +1,5 @@
 {
   "testFiles": "**/*.cy.test.*",
   "componentFolder": "src",
-  "nodeVersion": "system",
-  "env": {
-    "coverage": true
-  },
-  "projectId": "mf8wbk"
+  "nodeVersion": "system"
 }
