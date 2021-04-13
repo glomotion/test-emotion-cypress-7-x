@@ -1,7 +1,6 @@
 {
   "testFiles": "**/*.cy.test.*",
   "componentFolder": "src",
-  "fixturesFolder": false,
   "nodeVersion": "system",
   "env": {
     "coverage": true

@@ -4,8 +4,6 @@ import { mount } from "@cypress/react";
 import { sheet } from "@emotion/css";
 import { Box, colors } from "@imtbl/design-system";
 
-import NotFoundPage from "./NotFoundPage";
-
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
     sheet.tags.forEach((tag) => {
