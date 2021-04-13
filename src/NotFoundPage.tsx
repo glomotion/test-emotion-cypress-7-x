@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     axios
       .get("https://api.dev.x.immutable.com/v1/collections")
       .then((resp: any) => {
-        console.log("@@@@@@@@@@@@@", resp.body);
+        console.log("@@@@@@@@@@@@@", resp.data);
       });
   }, []);
   return (
