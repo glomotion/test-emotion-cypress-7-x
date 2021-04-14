@@ -19,6 +19,7 @@ export const initialState: ContainerState = {
     linkUrl: "",
     flags: {},
   },
+  collections: [],
 };
 
 const appReducer: Reducer<ContainerState, ContainerActions> = (
@@ -46,6 +47,15 @@ const appReducer: Reducer<ContainerState, ContainerActions> = (
         draft.config.apiUrl = "INIT FAILED";
         draft.config.apiVersion = "INIT FAILED";
         draft.config.linkUrl = "INIT FAILED";
+        break;
+
+      case ActionTypes.LOAD_SOME_DATA:
+        draft.loading = true;
+        break;
+
+      case ActionTypes.LOAD_SOME_DATA_SUCCESS:
+        draft.loading = false;
+        draft.collections = action.payload;
         break;
 
       default:

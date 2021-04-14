@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   colors,
   FlexLayout,
@@ -8,22 +8,31 @@ import {
   VerticalSpace,
 } from "@imtbl/design-system";
 import { createStructuredSelector } from "reselect";
+import { useDispatch, useSelector } from "react-redux";
+import { css } from "@emotion/css";
+
 import {
+  makeSelectCollections,
   makeSelectConfig,
   makeSelectFlags,
   makeSelectInitialized,
 } from "./selectors";
-import { useSelector } from "react-redux";
-import { css } from "@emotion/css";
+import { loadSomeData } from "./actions";
 
 const stateSelector = createStructuredSelector({
   initialized: makeSelectInitialized(),
   config: makeSelectConfig(),
   defaultFlags: makeSelectFlags(),
+  collections: makeSelectCollections(),
 });
 
 export default function App() {
   const props = useSelector(stateSelector);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadSomeData());
+  }, []);
   return (
     <FlexLayout
       flexGrow={1}

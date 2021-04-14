@@ -5,6 +5,7 @@ import { sheet } from "@emotion/css";
 import { Box, colors } from "@imtbl/design-system";
 
 import App from ".";
+import { renderCyComponent } from "../testRenderer";
 
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
@@ -25,12 +26,12 @@ describe("<AssetDetailsContent />", () => {
   });
 
   it("test 1", () => {
-    mount(<App />);
+    renderCyComponent({ withState: {}, children: <App />, initRootSaga: true });
     cy.waitFor("@collectionsStub");
   });
 
   it("test 2", () => {
-    mount(<App />);
+    renderCyComponent({ withState: {}, children: <App />, initRootSaga: true });
     cy.waitFor("@collectionsStub");
   });
 });

@@ -7,17 +7,17 @@ import { BrowserRouter } from "react-router-dom";
 import { init } from "./App/actions";
 import configureStore from "./configureStore";
 
-type RenderCyPageProps = {
+type RenderCyComponentProps = {
   withState: any;
   children: JSX.Element;
   initRootSaga?: boolean;
 };
 
-export const renderCyPage = ({
+export const renderCyComponent = ({
   withState,
   children,
   initRootSaga,
-}: RenderCyPageProps) => {
+}: RenderCyComponentProps) => {
   const store = configureStore(withState);
   cy.spy(store, "dispatch").as("dispatch");
   if (initRootSaga) {

@@ -9,6 +9,7 @@ interface AppState {
   readonly loading: boolean;
   readonly initialized: boolean;
   readonly config: AppConfig;
+  readonly collections: any[];
 }
 
 /* --- STATE --- */

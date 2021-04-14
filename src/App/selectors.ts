@@ -11,3 +11,6 @@ export const makeSelectConfig = () =>
 
 export const makeSelectFlags = () =>
   createSelector(selectApp, (globalState) => globalState.config.flags);
+
+export const makeSelectCollections = () =>
+  createSelector(selectApp, (globalState) => globalState.collections);
