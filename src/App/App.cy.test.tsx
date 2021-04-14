@@ -4,6 +4,8 @@ import { mount } from "@cypress/react";
 import { sheet } from "@emotion/css";
 import { Box, colors } from "@imtbl/design-system";
 
+import App from ".";
+
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
     sheet.tags.forEach((tag) => {
@@ -12,31 +14,23 @@ describe("<AssetDetailsContent />", () => {
     cy.intercept(
       {
         method: "GET",
-        pathname: "/v1/collections",
+        pathname: "/config.json",
       },
       (req) => {
         req.reply({
-          fixture: "mockCollections.json",
+          fixture: "config.json",
         });
       }
-    ).as("collectionsStub");
+    ).as("configStub");
   });
 
   it("test 1", () => {
-    mount(
-      <Box backgroundColor={colors.bg[700]} padding="30px">
-        <NotFoundPage />
-      </Box>
-    );
+    mount(<App />);
     cy.waitFor("@collectionsStub");
   });
 
   it("test 2", () => {
-    mount(
-      <Box backgroundColor={colors.bg[700]} padding="30px">
-        <NotFoundPage />
-      </Box>
-    );
+    mount(<App />);
     cy.waitFor("@collectionsStub");
   });
 });

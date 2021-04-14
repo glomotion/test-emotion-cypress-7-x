@@ -1,0 +1,8 @@
+{
+  "API_URL": "THIS IS FIXTURE MOCK DATA",
+  "API_VERSION": "v1",
+  "LINK_URL": "https://link.dev.x.immutable.com",
+  "flags": {
+    "imx1706_enableMarketplaceFiltering": true
+  }
+}

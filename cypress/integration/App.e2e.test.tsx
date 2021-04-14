@@ -4,8 +4,6 @@ import { mount } from "@cypress/react";
 import { sheet } from "@emotion/css";
 import { Box, colors } from "@imtbl/design-system";
 
-import NotFoundPage from "./NotFoundPage";
-
 describe("<AssetDetailsContent />", () => {
   beforeEach(() => {
     sheet.tags.forEach((tag) => {
@@ -25,20 +23,12 @@ describe("<AssetDetailsContent />", () => {
   });
 
   it("test 1", () => {
-    mount(
-      <Box backgroundColor={colors.bg[700]} padding="30px">
-        <NotFoundPage />
-      </Box>
-    );
+    cy.visit("http://localhost:3000");
     cy.waitFor("@collectionsStub");
   });
 
   it("test 2", () => {
-    mount(
-      <Box backgroundColor={colors.bg[700]} padding="30px">
-        <NotFoundPage />
-      </Box>
-    );
+    cy.visit("http://localhost:3000");
     cy.waitFor("@collectionsStub");
   });
 });

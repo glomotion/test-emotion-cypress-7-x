@@ -1,0 +1,8 @@
+{
+  "API_URL": "https://api.dev.x.immutable.com",
+  "API_VERSION": "v1",
+  "LINK_URL": "https://link.dev.x.immutable.com",
+  "flags": {
+    "imx1706_enableMarketplaceFiltering": true
+  }
+}
