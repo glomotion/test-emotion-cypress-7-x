@@ -23,6 +23,17 @@ describe("<AssetDetailsContent />", () => {
         });
       }
     ).as("configStub");
+    cy.intercept(
+      {
+        method: "GET",
+        pathname: "/v1/collections",
+      },
+      (req) => {
+        req.reply({
+          fixture: "mockCollections.json",
+        });
+      }
+    ).as("collectionsStub");
   });
 
   it("test 1", () => {
